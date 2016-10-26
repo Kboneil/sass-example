@@ -1,0 +1,23 @@
+@import 'reset';
+
+$main-border: 2px solid pink;
+
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+
+header {
+  h1 {
+    color: black;
+    border: $main-border
+  }
+}
+
+main {
+  h1 {
+    color: green;
+  }
+}
