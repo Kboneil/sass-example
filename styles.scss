@@ -4,7 +4,7 @@
 $main-border: 2px solid pink;
 $main-color: blue;
 
-#shapeExample { @include makeShape(0, 100px, 400px, $main-color); }
+#shapeExample { @include makeShape(0, 100px, 100px, $main-color); }
 #circleExample { @include makeCircle(500px, yellow); }
 
 header {
