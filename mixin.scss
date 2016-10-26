@@ -1,0 +1,16 @@
+@mixin makeShape($radius, $height, $width, $color) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+                 height: $height;
+                   width: $width;
+        background-color: $color;
+}
+
+@mixin makeCircle($height, $color) {
+              border-radius: 50%;
+                 height: $height;
+                  width: $height;
+        background-color: $color;
+}

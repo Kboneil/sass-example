@@ -1,13 +1,11 @@
 @import 'reset';
+@import 'mixin';
 
 $main-border: 2px solid pink;
+$main-color: blue;
 
-
-@mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-     -moz-border-radius: $radius;
-      -ms-border-radius: $radius;
-          border-radius: $radius;
+#shapeExample { @include makeShape(0, 100px, 400px, $main-color); }
+#circleExample { @include makeCircle(500px, yellow); }
 
 header {
   h1 {
@@ -19,5 +17,21 @@ header {
 main {
   h1 {
     color: green;
+  }
+  #extend {
+    #one{
+      font-size: 30px;
+      font-style: italic;
+      text-transform: uppercase;
+    }
+    #two {
+      @extend #one;
+      color:limegreen;
+    }
+    #three {
+      @extend #two;
+      border: $main-border;
+      background-color: $main-color;
+    }
   }
 }
